@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  Jupiter
 //
-//  Created by 小舘航 on 2015/11/22.
+//  Created by wkodate on 2015/11/22.
 //  Copyright © 2015年 wkodate. All rights reserved.
 //
 
