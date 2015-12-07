@@ -63,13 +63,19 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
+        if (segue.identifier == "toWebViewController") {
+            let webViewController : WebViewController = segue.destinationViewController as! WebViewController
+            webViewController.link = articles[0].link
+        }
+    }
+
     /*
     Cellの総数を返すデータソースメソッド.
     Tableのセル数を指定
     */
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         print("tableView.numberOfRowsInSection is called.")
-        //return 200
         return articles.count
     }
     
