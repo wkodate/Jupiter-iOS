@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MainViewController.swift
 //  Jupiter
 //
 //  Created by wkodate on 2015/11/22.
@@ -45,6 +45,22 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         // Viewに追加する.
         self.view.addSubview(tableView)
+        
+        // NavigationBarを取得する
+        self.navigationController?.navigationBar
+        
+        // NavigationBarを表示する
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
+        
+        // NavigationItemの取得する.
+        self.navigationItem
+        
+        // タイトルを設定する.
+        self.navigationItem.title = "なんJまとめのまとめ"
+        
+        // 背景色の変更
+        let color = UIColor(red: 0/255, green: 150/255, blue: 136/255, alpha: 1.0)
+        self.navigationController?.navigationBar.barTintColor = color
     }
     
     /*
@@ -53,14 +69,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     */
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         print("tableView.didSelectRowAtIndexPath called.")
-        print("viewDidLoad started.")
         print("Num: \(indexPath.row)")
         print("Value: \(self.articles[indexPath.row].title)")
         // WebViewContollerに遷移
-        //let webViewController: WebViewController = WebViewController()
-        //self.navigationController?.pushViewController(webViewController, animated: true)
-        performSegueWithIdentifier("toWebViewController",sender: nil)
-        
+        let webViewController: WebViewController = WebViewController()
+        webViewController.articleLink = articles[indexPath.row].link
+        webViewController.articleTitle = articles[indexPath.row].title
+        self.navigationController?.pushViewController(webViewController, animated: true)
     }
     
     /*
@@ -69,7 +84,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     */
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         print("tableView.numberOfRowsInSection is called.")
-        //return 200
         return articles.count
     }
     
@@ -95,7 +109,8 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func request() {
         print("request is called.")
-        let url = NSURL(string: "http://hoge.com")!
+        let url = NSURL(string: "http://www6178uo.sakura.ne.jp/jupiter/index.json")!
+        //let url = NSURL(string: "http://hoge.com")!
         
         let config = NSURLSessionConfiguration.defaultSessionConfiguration()
         let session = NSURLSession(configuration: config)

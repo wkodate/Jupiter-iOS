@@ -11,31 +11,40 @@ import UIKit
 
 class WebViewController: UIViewController, UIWebViewDelegate {
     
-    private var myWebView: UIWebView!
+    private var webView: UIWebView!
+
+    var articleTitle : String = ""
+    
+    var articleLink : String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // WebViewを生成.
-        myWebView = UIWebView()
+        webView = UIWebView()
         
         // Delegateを設定する.
-        myWebView.delegate = self
+        webView.delegate = self
         
         // WebViewのサイズを設定する.
-        myWebView.frame = self.view.bounds
+        webView.frame = self.view.bounds
         
         // Viewに追加する.
-        self.view.addSubview(myWebView)
+        self.view.addSubview(webView)
+        
+        // タイトルを設定
+        self.title = self.articleTitle
+        
+        self.view.backgroundColor = UIColor.blackColor()
         
         // URLを設定する.
-        let url: NSURL = NSURL(string: "http://www.apple.com")!
+        let url: NSURL = NSURL(string: self.articleLink)!
         
         // リクエストを作成する.
         let request: NSURLRequest = NSURLRequest(URL: url)
         
         // リクエストを実行する.
-        myWebView.loadRequest(request)
+        webView.loadRequest(request)
     }
     
     /*
