@@ -18,6 +18,7 @@ class WebViewController: UIViewController, UIWebViewDelegate {
     var articleLink : String = ""
     
     override func viewDidLoad() {
+        print("viewDidLoad")
         super.viewDidLoad()
         
         // WebViewを生成.
