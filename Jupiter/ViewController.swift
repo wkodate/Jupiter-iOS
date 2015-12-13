@@ -77,13 +77,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         webViewController.articleTitle = articles[indexPath.row].title
         self.navigationController?.pushViewController(webViewController, animated: true)
     }
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-        if (segue.identifier == "toWebViewController") {
-            let webViewController : WebViewController = segue.destinationViewController as! WebViewController
-            webViewController.link = articles[0].link
-        }
-    }
 
     /*
     Cellの総数を返すデータソースメソッド.
