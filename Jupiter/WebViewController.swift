@@ -13,7 +13,9 @@ class WebViewController: UIViewController, UIWebViewDelegate {
     
     private var webView: UIWebView!
 
-    var link : String = ""
+    var articleTitle : String = ""
+    
+    var articleLink : String = ""
     
     override func viewDidLoad() {
         print("viewDidLoad")
@@ -31,8 +33,13 @@ class WebViewController: UIViewController, UIWebViewDelegate {
         // Viewに追加する.
         self.view.addSubview(webView)
         
+        // タイトルを設定
+        self.title = self.articleTitle
+        
+        self.view.backgroundColor = UIColor.blackColor()
+        
         // URLを設定する.
-        let url: NSURL = NSURL(string: self.link)!
+        let url: NSURL = NSURL(string: self.articleLink)!
         
         // リクエストを作成する.
         let request: NSURLRequest = NSURLRequest(URL: url)
