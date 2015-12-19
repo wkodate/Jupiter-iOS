@@ -1,0 +1,610 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		893F365764F244AC82972C56 /* Pods_Jupiter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F577E65B3A5118B61B7C321 /* Pods_Jupiter.framework */; };
+		C9BA29631C2513190060EA87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BA29621C2513190060EA87 /* AppDelegate.swift */; };
+		C9BA29661C2513190060EA87 /* Jupiter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C9BA29641C2513190060EA87 /* Jupiter.xcdatamodeld */; };
+		C9BA29681C2513190060EA87 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BA29671C2513190060EA87 /* MasterViewController.swift */; };
+		C9BA296A1C2513190060EA87 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BA29691C2513190060EA87 /* DetailViewController.swift */; };
+		C9BA296D1C2513190060EA87 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9BA296B1C2513190060EA87 /* Main.storyboard */; };
+		C9BA296F1C2513190060EA87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9BA296E1C2513190060EA87 /* Assets.xcassets */; };
+		C9BA29721C2513190060EA87 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9BA29701C2513190060EA87 /* LaunchScreen.storyboard */; };
+		C9BA297D1C2513190060EA87 /* JupiterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BA297C1C2513190060EA87 /* JupiterTests.swift */; };
+		C9BA29881C2513190060EA87 /* JupiterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BA29871C2513190060EA87 /* JupiterUITests.swift */; };
+		C9BA29961C251C3A0060EA87 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BA29951C251C3A0060EA87 /* Article.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C9BA29791C2513190060EA87 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9BA29571C2513190060EA87 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C9BA295E1C2513190060EA87;
+			remoteInfo = Jupiter;
+		};
+		C9BA29841C2513190060EA87 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C9BA29571C2513190060EA87 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C9BA295E1C2513190060EA87;
+			remoteInfo = Jupiter;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1F577E65B3A5118B61B7C321 /* Pods_Jupiter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Jupiter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8660919D2FA318A1AA715581 /* Pods-Jupiter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jupiter.release.xcconfig"; path = "Pods/Target Support Files/Pods-Jupiter/Pods-Jupiter.release.xcconfig"; sourceTree = "<group>"; };
+		B2906166A787960FEEBA7682 /* Pods-Jupiter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jupiter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Jupiter/Pods-Jupiter.debug.xcconfig"; sourceTree = "<group>"; };
+		C9BA295F1C2513190060EA87 /* Jupiter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jupiter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9BA29621C2513190060EA87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		C9BA29651C2513190060EA87 /* Jupiter.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Jupiter.xcdatamodel; sourceTree = "<group>"; };
+		C9BA29671C2513190060EA87 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		C9BA29691C2513190060EA87 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		C9BA296C1C2513190060EA87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C9BA296E1C2513190060EA87 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C9BA29711C2513190060EA87 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		C9BA29731C2513190060EA87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9BA29781C2513190060EA87 /* JupiterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JupiterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9BA297C1C2513190060EA87 /* JupiterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JupiterTests.swift; sourceTree = "<group>"; };
+		C9BA297E1C2513190060EA87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9BA29831C2513190060EA87 /* JupiterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JupiterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C9BA29871C2513190060EA87 /* JupiterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JupiterUITests.swift; sourceTree = "<group>"; };
+		C9BA29891C2513190060EA87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9BA29951C251C3A0060EA87 /* Article.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C9BA295C1C2513190060EA87 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				893F365764F244AC82972C56 /* Pods_Jupiter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9BA29751C2513190060EA87 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9BA29801C2513190060EA87 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		ADFB73E0A55F0C55F987A68F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B2906166A787960FEEBA7682 /* Pods-Jupiter.debug.xcconfig */,
+				8660919D2FA318A1AA715581 /* Pods-Jupiter.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C9BA29561C2513190060EA87 = {
+			isa = PBXGroup;
+			children = (
+				C9BA29611C2513190060EA87 /* Jupiter */,
+				C9BA297B1C2513190060EA87 /* JupiterTests */,
+				C9BA29861C2513190060EA87 /* JupiterUITests */,
+				C9BA29601C2513190060EA87 /* Products */,
+				ADFB73E0A55F0C55F987A68F /* Pods */,
+				CCE4CBC43DC8406FCFAA6215 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C9BA29601C2513190060EA87 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C9BA295F1C2513190060EA87 /* Jupiter.app */,
+				C9BA29781C2513190060EA87 /* JupiterTests.xctest */,
+				C9BA29831C2513190060EA87 /* JupiterUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C9BA29611C2513190060EA87 /* Jupiter */ = {
+			isa = PBXGroup;
+			children = (
+				C9BA29621C2513190060EA87 /* AppDelegate.swift */,
+				C9BA29671C2513190060EA87 /* MasterViewController.swift */,
+				C9BA29691C2513190060EA87 /* DetailViewController.swift */,
+				C9BA296B1C2513190060EA87 /* Main.storyboard */,
+				C9BA296E1C2513190060EA87 /* Assets.xcassets */,
+				C9BA29701C2513190060EA87 /* LaunchScreen.storyboard */,
+				C9BA29731C2513190060EA87 /* Info.plist */,
+				C9BA29641C2513190060EA87 /* Jupiter.xcdatamodeld */,
+				C9BA29951C251C3A0060EA87 /* Article.swift */,
+			);
+			path = Jupiter;
+			sourceTree = "<group>";
+		};
+		C9BA297B1C2513190060EA87 /* JupiterTests */ = {
+			isa = PBXGroup;
+			children = (
+				C9BA297C1C2513190060EA87 /* JupiterTests.swift */,
+				C9BA297E1C2513190060EA87 /* Info.plist */,
+			);
+			path = JupiterTests;
+			sourceTree = "<group>";
+		};
+		C9BA29861C2513190060EA87 /* JupiterUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C9BA29871C2513190060EA87 /* JupiterUITests.swift */,
+				C9BA29891C2513190060EA87 /* Info.plist */,
+			);
+			path = JupiterUITests;
+			sourceTree = "<group>";
+		};
+		CCE4CBC43DC8406FCFAA6215 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1F577E65B3A5118B61B7C321 /* Pods_Jupiter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C9BA295E1C2513190060EA87 /* Jupiter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9BA298C1C2513190060EA87 /* Build configuration list for PBXNativeTarget "Jupiter" */;
+			buildPhases = (
+				F80EE1DC5E537B64B4F7DF9A /* Check Pods Manifest.lock */,
+				C9BA295B1C2513190060EA87 /* Sources */,
+				C9BA295C1C2513190060EA87 /* Frameworks */,
+				C9BA295D1C2513190060EA87 /* Resources */,
+				C2E4D30B3B501BBE232AAB0F /* Embed Pods Frameworks */,
+				08FE04FBFAAF7C0D5C391AAC /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Jupiter;
+			productName = Jupiter;
+			productReference = C9BA295F1C2513190060EA87 /* Jupiter.app */;
+			productType = "com.apple.product-type.application";
+		};
+		C9BA29771C2513190060EA87 /* JupiterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9BA298F1C2513190060EA87 /* Build configuration list for PBXNativeTarget "JupiterTests" */;
+			buildPhases = (
+				C9BA29741C2513190060EA87 /* Sources */,
+				C9BA29751C2513190060EA87 /* Frameworks */,
+				C9BA29761C2513190060EA87 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C9BA297A1C2513190060EA87 /* PBXTargetDependency */,
+			);
+			name = JupiterTests;
+			productName = JupiterTests;
+			productReference = C9BA29781C2513190060EA87 /* JupiterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		C9BA29821C2513190060EA87 /* JupiterUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C9BA29921C2513190060EA87 /* Build configuration list for PBXNativeTarget "JupiterUITests" */;
+			buildPhases = (
+				C9BA297F1C2513190060EA87 /* Sources */,
+				C9BA29801C2513190060EA87 /* Frameworks */,
+				C9BA29811C2513190060EA87 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C9BA29851C2513190060EA87 /* PBXTargetDependency */,
+			);
+			name = JupiterUITests;
+			productName = JupiterUITests;
+			productReference = C9BA29831C2513190060EA87 /* JupiterUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C9BA29571C2513190060EA87 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = wkodate;
+				TargetAttributes = {
+					C9BA295E1C2513190060EA87 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					C9BA29771C2513190060EA87 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = C9BA295E1C2513190060EA87;
+					};
+					C9BA29821C2513190060EA87 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = C9BA295E1C2513190060EA87;
+					};
+				};
+			};
+			buildConfigurationList = C9BA295A1C2513190060EA87 /* Build configuration list for PBXProject "Jupiter" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C9BA29561C2513190060EA87;
+			productRefGroup = C9BA29601C2513190060EA87 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C9BA295E1C2513190060EA87 /* Jupiter */,
+				C9BA29771C2513190060EA87 /* JupiterTests */,
+				C9BA29821C2513190060EA87 /* JupiterUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C9BA295D1C2513190060EA87 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9BA29721C2513190060EA87 /* LaunchScreen.storyboard in Resources */,
+				C9BA296F1C2513190060EA87 /* Assets.xcassets in Resources */,
+				C9BA296D1C2513190060EA87 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9BA29761C2513190060EA87 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9BA29811C2513190060EA87 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		08FE04FBFAAF7C0D5C391AAC /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Jupiter/Pods-Jupiter-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C2E4D30B3B501BBE232AAB0F /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Jupiter/Pods-Jupiter-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F80EE1DC5E537B64B4F7DF9A /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C9BA295B1C2513190060EA87 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9BA29631C2513190060EA87 /* AppDelegate.swift in Sources */,
+				C9BA29661C2513190060EA87 /* Jupiter.xcdatamodeld in Sources */,
+				C9BA29681C2513190060EA87 /* MasterViewController.swift in Sources */,
+				C9BA296A1C2513190060EA87 /* DetailViewController.swift in Sources */,
+				C9BA29961C251C3A0060EA87 /* Article.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9BA29741C2513190060EA87 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9BA297D1C2513190060EA87 /* JupiterTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C9BA297F1C2513190060EA87 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C9BA29881C2513190060EA87 /* JupiterUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C9BA297A1C2513190060EA87 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C9BA295E1C2513190060EA87 /* Jupiter */;
+			targetProxy = C9BA29791C2513190060EA87 /* PBXContainerItemProxy */;
+		};
+		C9BA29851C2513190060EA87 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C9BA295E1C2513190060EA87 /* Jupiter */;
+			targetProxy = C9BA29841C2513190060EA87 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		C9BA296B1C2513190060EA87 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C9BA296C1C2513190060EA87 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		C9BA29701C2513190060EA87 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C9BA29711C2513190060EA87 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		C9BA298A1C2513190060EA87 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C9BA298B1C2513190060EA87 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C9BA298D1C2513190060EA87 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B2906166A787960FEEBA7682 /* Pods-Jupiter.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Jupiter/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wkodate.Jupiter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		C9BA298E1C2513190060EA87 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8660919D2FA318A1AA715581 /* Pods-Jupiter.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Jupiter/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wkodate.Jupiter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		C9BA29901C2513190060EA87 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = JupiterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wkodate.JupiterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Jupiter.app/Jupiter";
+			};
+			name = Debug;
+		};
+		C9BA29911C2513190060EA87 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = JupiterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wkodate.JupiterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Jupiter.app/Jupiter";
+			};
+			name = Release;
+		};
+		C9BA29931C2513190060EA87 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = JupiterUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wkodate.JupiterUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Jupiter;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		C9BA29941C2513190060EA87 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = JupiterUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wkodate.JupiterUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Jupiter;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C9BA295A1C2513190060EA87 /* Build configuration list for PBXProject "Jupiter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9BA298A1C2513190060EA87 /* Debug */,
+				C9BA298B1C2513190060EA87 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C9BA298C1C2513190060EA87 /* Build configuration list for PBXNativeTarget "Jupiter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9BA298D1C2513190060EA87 /* Debug */,
+				C9BA298E1C2513190060EA87 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C9BA298F1C2513190060EA87 /* Build configuration list for PBXNativeTarget "JupiterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9BA29901C2513190060EA87 /* Debug */,
+				C9BA29911C2513190060EA87 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C9BA29921C2513190060EA87 /* Build configuration list for PBXNativeTarget "JupiterUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C9BA29931C2513190060EA87 /* Debug */,
+				C9BA29941C2513190060EA87 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C9BA29641C2513190060EA87 /* Jupiter.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C9BA29651C2513190060EA87 /* Jupiter.xcdatamodel */,
+			);
+			currentVersion = C9BA29651C2513190060EA87 /* Jupiter.xcdatamodel */;
+			path = Jupiter.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = C9BA29571C2513190060EA87 /* Project object */;
+}
