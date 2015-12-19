@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		893F365764F244AC82972C56 /* Pods_Jupiter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F577E65B3A5118B61B7C321 /* Pods_Jupiter.framework */; };
 		C9BA29631C2513190060EA87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BA29621C2513190060EA87 /* AppDelegate.swift */; };
 		C9BA29661C2513190060EA87 /* Jupiter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C9BA29641C2513190060EA87 /* Jupiter.xcdatamodeld */; };
 		C9BA29681C2513190060EA87 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BA29671C2513190060EA87 /* MasterViewController.swift */; };
@@ -16,6 +17,7 @@
 		C9BA29721C2513190060EA87 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C9BA29701C2513190060EA87 /* LaunchScreen.storyboard */; };
 		C9BA297D1C2513190060EA87 /* JupiterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BA297C1C2513190060EA87 /* JupiterTests.swift */; };
 		C9BA29881C2513190060EA87 /* JupiterUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BA29871C2513190060EA87 /* JupiterUITests.swift */; };
+		C9BA29961C251C3A0060EA87 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BA29951C251C3A0060EA87 /* Article.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1F577E65B3A5118B61B7C321 /* Pods_Jupiter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Jupiter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8660919D2FA318A1AA715581 /* Pods-Jupiter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jupiter.release.xcconfig"; path = "Pods/Target Support Files/Pods-Jupiter/Pods-Jupiter.release.xcconfig"; sourceTree = "<group>"; };
+		B2906166A787960FEEBA7682 /* Pods-Jupiter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jupiter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Jupiter/Pods-Jupiter.debug.xcconfig"; sourceTree = "<group>"; };
 		C9BA295F1C2513190060EA87 /* Jupiter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jupiter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9BA29621C2513190060EA87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C9BA29651C2513190060EA87 /* Jupiter.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Jupiter.xcdatamodel; sourceTree = "<group>"; };
@@ -51,6 +56,7 @@
 		C9BA29831C2513190060EA87 /* JupiterUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JupiterUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9BA29871C2513190060EA87 /* JupiterUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JupiterUITests.swift; sourceTree = "<group>"; };
 		C9BA29891C2513190060EA87 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9BA29951C251C3A0060EA87 /* Article.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				893F365764F244AC82972C56 /* Pods_Jupiter.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +85,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		ADFB73E0A55F0C55F987A68F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B2906166A787960FEEBA7682 /* Pods-Jupiter.debug.xcconfig */,
+				8660919D2FA318A1AA715581 /* Pods-Jupiter.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		C9BA29561C2513190060EA87 = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +101,8 @@
 				C9BA297B1C2513190060EA87 /* JupiterTests */,
 				C9BA29861C2513190060EA87 /* JupiterUITests */,
 				C9BA29601C2513190060EA87 /* Products */,
+				ADFB73E0A55F0C55F987A68F /* Pods */,
+				CCE4CBC43DC8406FCFAA6215 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -109,6 +127,7 @@
 				C9BA29701C2513190060EA87 /* LaunchScreen.storyboard */,
 				C9BA29731C2513190060EA87 /* Info.plist */,
 				C9BA29641C2513190060EA87 /* Jupiter.xcdatamodeld */,
+				C9BA29951C251C3A0060EA87 /* Article.swift */,
 			);
 			path = Jupiter;
 			sourceTree = "<group>";
@@ -131,6 +150,14 @@
 			path = JupiterUITests;
 			sourceTree = "<group>";
 		};
+		CCE4CBC43DC8406FCFAA6215 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1F577E65B3A5118B61B7C321 /* Pods_Jupiter.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -138,9 +165,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C9BA298C1C2513190060EA87 /* Build configuration list for PBXNativeTarget "Jupiter" */;
 			buildPhases = (
+				F80EE1DC5E537B64B4F7DF9A /* Check Pods Manifest.lock */,
 				C9BA295B1C2513190060EA87 /* Sources */,
 				C9BA295C1C2513190060EA87 /* Frameworks */,
 				C9BA295D1C2513190060EA87 /* Resources */,
+				C2E4D30B3B501BBE232AAB0F /* Embed Pods Frameworks */,
+				08FE04FBFAAF7C0D5C391AAC /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -257,6 +287,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		08FE04FBFAAF7C0D5C391AAC /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Jupiter/Pods-Jupiter-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C2E4D30B3B501BBE232AAB0F /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Jupiter/Pods-Jupiter-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F80EE1DC5E537B64B4F7DF9A /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C9BA295B1C2513190060EA87 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -266,6 +344,7 @@
 				C9BA29661C2513190060EA87 /* Jupiter.xcdatamodeld in Sources */,
 				C9BA29681C2513190060EA87 /* MasterViewController.swift in Sources */,
 				C9BA296A1C2513190060EA87 /* DetailViewController.swift in Sources */,
+				C9BA29961C251C3A0060EA87 /* Article.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -403,6 +482,7 @@
 		};
 		C9BA298D1C2513190060EA87 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B2906166A787960FEEBA7682 /* Pods-Jupiter.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Jupiter/Info.plist;
@@ -414,6 +494,7 @@
 		};
 		C9BA298E1C2513190060EA87 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8660919D2FA318A1AA715581 /* Pods-Jupiter.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Jupiter/Info.plist;
@@ -490,6 +571,7 @@
 				C9BA298E1C2513190060EA87 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C9BA298F1C2513190060EA87 /* Build configuration list for PBXNativeTarget "JupiterTests" */ = {
 			isa = XCConfigurationList;
@@ -498,6 +580,7 @@
 				C9BA29911C2513190060EA87 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C9BA29921C2513190060EA87 /* Build configuration list for PBXNativeTarget "JupiterUITests" */ = {
 			isa = XCConfigurationList;
@@ -506,6 +589,7 @@
 				C9BA29941C2513190060EA87 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

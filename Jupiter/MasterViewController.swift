@@ -8,16 +8,18 @@
 
 import UIKit
 import CoreData
+import SwiftyJSON
 
 class MasterViewController: UITableViewController, NSFetchedResultsControllerDelegate {
     
-    var objects = ["aaa", "bbb", "ccc", "ddd", "eee"]
+    private var articles: Array<Article>! = []
     
     var detailViewController: DetailViewController? = nil
     var managedObjectContext: NSManagedObjectContext? = nil
     
     override func viewDidLoad() {
         print("viewDidLoad")
+        request()
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.title =  "なんJまとめのまとめ"
@@ -42,60 +44,44 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         print("prepareForSegue")
         if segue.identifier == "showDetail" {
             if let indexPath = self.tableView.indexPathForSelectedRow {
-                let object = objects[indexPath.row]
-                //let object = self.fetchedResultsController.objectAtIndexPath(indexPath)
-                print("object=" + object)
-                let controller = (segue.destinationViewController as! UINavigationController).topViewController as! DetailViewController
-                controller.detailItem = object
-                controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
-                controller.navigationItem.leftItemsSupplementBackButton = true
+                let detailController = (segue.destinationViewController as! UINavigationController).topViewController as! DetailViewController
+                print("article=" + articles[indexPath.row].description!)
+                detailController.detailItem = articles[indexPath.row]
+                detailController.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
+                detailController.navigationItem.leftItemsSupplementBackButton = true
             }
         }
     }
     
     // MARK: - Table View
     
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        print("numberOfSectionsInTableView")
-        // セクション数
-        return 1
-        //return self.fetchedResultsController.sections?.count ?? 0
-    }
-    
+    /*
+    Cellの総数を返すデータソースメソッド.
+    Tableのセル数を指定
+    */
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         print("tableView numberOfRowsInSection")
-        print("section=" + section.description)
         // cell数
-        return objects.count
+        //return objects.count
+        return articles.count
     }
     
+    /*
+    Cellに値を設定するデータソースメソッド.
+    各cellの設定
+    */
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         print("tableView cellForRowAtIndexPath")
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
-        let object = objects[indexPath.row]
-        cell.textLabel!.text = object
+        //let object = objects[indexPath.row]
+        print("indexPath.row=" + indexPath.row.description)
+        let title = articles[indexPath.row].title
+        cell.textLabel!.text = title
         return cell
     }
     
     // MARK: - Fetched results controller
     
-    var fetchedResultsController: NSFetchedResultsController {
-        print("fetchedResultsController")
-        if _fetchedResultsController != nil {
-            return _fetchedResultsController!
-        }
-        
-        let fetchRequest = NSFetchRequest()
-        // Edit the entity name as appropriate.
-        let entity = NSEntityDescription.entityForName("Event", inManagedObjectContext: self.managedObjectContext!)
-        fetchRequest.entity = entity
-        print("entity=" + entity!.description)
-        
-        // Set the batch size to a suitable number.
-        fetchRequest.fetchBatchSize = 20
-        
-        return _fetchedResultsController!
-    }
     var _fetchedResultsController: NSFetchedResultsController? = nil
     
     func controllerWillChangeContent(controller: NSFetchedResultsController) {
@@ -106,6 +92,38 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     func controllerDidChangeContent(controller: NSFetchedResultsController) {
         print("controllerDidChangeContent")
         self.tableView.endUpdates()
+    }
+    
+    func request() {
+        print("request is called.")
+        let url = NSURL(string: "http://www6178uo.sakura.ne.jp/jupiter/index.json")!
+        
+        let config = NSURLSessionConfiguration.defaultSessionConfiguration()
+        let session = NSURLSession(configuration: config)
+        let req = NSURLRequest(URL: url)
+        // jsonデータをパース
+        let task = session.dataTaskWithRequest(req, completionHandler: {
+            (data, res, err) in
+            let res = NSString(data: data!, encoding: NSUTF8StringEncoding) as! String
+            if let dataFromString = res.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false) {
+                let json = JSON(data: dataFromString)
+                for (_,subJson):(String, JSON) in json {
+                    let title:String!  = subJson["title"].string
+                    let url:String! = subJson["link"].string
+                    let rssTitle:String! = subJson["rss_title"].string
+                    let created:String! = subJson["date"].string
+                    let imageUrl:String! = subJson["image"].string
+                    let description:String! = subJson["description"].string
+                    let article = Article(title: title, link: url, rssTitle: rssTitle, created: created, imageUrl: imageUrl, description: description)
+                    print(article.title)
+                    self.articles.append(article)
+                }
+            }
+            dispatch_async(dispatch_get_main_queue(), {
+                self.tableView.reloadData()
+            })
+        })
+        task.resume()
     }
 
 }
