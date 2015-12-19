@@ -35,7 +35,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         tableView = UITableView(frame: CGRect(x: 0, y: barHeight, width: displayWidth, height: displayHeight - barHeight))
         
         // Cell名の登録をおこなう.
-        tableView.registerClass(UITableViewCell.self, forCellReuseIdentifier: "MyCell")
+        tableView.registerClass(ArticleTableViewCell.self, forCellReuseIdentifier: "articleCell")
         
         // DataSourceの設定をする.
         tableView.dataSource = self
@@ -45,6 +45,22 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         
         // Viewに追加する.
         self.view.addSubview(tableView)
+        
+        // NavigationBarを取得する
+        self.navigationController?.navigationBar
+        
+        // NavigationBarを表示する
+        self.navigationController?.setNavigationBarHidden(false, animated: false)
+        
+        // NavigationItemの取得する.
+        self.navigationItem
+        
+        // タイトルを設定する.
+        self.navigationItem.title = "なんJまとめのまとめ"
+        
+        // 背景色の変更
+        let color = UIColor(red: 0/255, green: 150/255, blue: 136/255, alpha: 1.0)
+        self.navigationController?.navigationBar.barTintColor = color
     }
     
     /*
@@ -53,21 +69,13 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     */
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         print("tableView.didSelectRowAtIndexPath called.")
-        print("viewDidLoad started.")
         print("Num: \(indexPath.row)")
         print("Value: \(self.articles[indexPath.row].title)")
         // WebViewContollerに遷移
-        //let webViewController: WebViewController = WebViewController()
-        //self.navigationController?.pushViewController(webViewController, animated: true)
-        performSegueWithIdentifier("toWebViewController",sender: nil)
-        
-    }
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject!) {
-        if (segue.identifier == "toWebViewController") {
-            let webViewController : WebViewController = segue.destinationViewController as! WebViewController
-            webViewController.link = articles[0].link
-        }
+        let webViewController: WebViewController = WebViewController()
+        webViewController.articleLink = articles[indexPath.row].link
+        webViewController.articleTitle = articles[indexPath.row].title
+        self.navigationController?.pushViewController(webViewController, animated: true)
     }
 
     /*
@@ -86,9 +94,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         print("tableView.cellForRowAtIndexPath is called.")
         // 再利用するCellを取得する.
-        let cell = tableView.dequeueReusableCellWithIdentifier("MyCell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("articleCell", forIndexPath: indexPath)
         // Cellに値を設定する.
         cell.textLabel!.text = articles[indexPath.row].title
+        do {
+        let url = NSURL(string:articles[indexPath.row].imageUrl!);
+        let imageData = try NSData(contentsOfURL:url!,options: NSDataReadingOptions.DataReadingMappedIfSafe);
+        let img = UIImage(data:imageData);
+        cell.imageView!.image = img
+        } catch {
+            print("Error: Cannot create image")
+            cell.imageView!.image = nil
+        }
         
         return cell
     }
@@ -101,7 +118,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     
     func request() {
         print("request is called.")
-        let url = NSURL(string: "http://hoge.com")!
+        let url = NSURL(string: "http://www6178uo.sakura.ne.jp/jupiter/index.json")!
         
         let config = NSURLSessionConfiguration.defaultSessionConfiguration()
         let session = NSURLSession(configuration: config)
@@ -112,7 +129,7 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
             let res = NSString(data: data!, encoding: NSUTF8StringEncoding) as! String
             if let dataFromString = res.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false) {
                 let json = JSON(data: dataFromString)
-                for (index,subJson):(String, JSON) in json {
+                for (_,subJson):(String, JSON) in json {
                     let title:String!  = subJson["title"].string
                     let url:String! = subJson["link"].string
                     let rssTitle:String! = subJson["rss_title"].string
