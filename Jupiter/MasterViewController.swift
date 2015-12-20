@@ -45,7 +45,6 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
         if segue.identifier == "showDetail" {
             if let indexPath = self.tableView.indexPathForSelectedRow {
                 let detailController = (segue.destinationViewController as! UINavigationController).topViewController as! DetailViewController
-                print("article=" + articles[indexPath.row].description!)
                 detailController.detailItem = articles[indexPath.row]
                 detailController.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
                 detailController.navigationItem.leftItemsSupplementBackButton = true
@@ -62,7 +61,6 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         print("tableView numberOfRowsInSection")
         // cell数
-        //return objects.count
         return articles.count
     }
     
@@ -72,17 +70,13 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     */
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         print("tableView cellForRowAtIndexPath")
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath)
-        //let object = objects[indexPath.row]
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! ArticleTableViewCell
         print("indexPath.row=" + indexPath.row.description)
-        let title = articles[indexPath.row].title
-        cell.textLabel!.text = title
+        cell.setCell(articles[indexPath.row])
         return cell
     }
     
     // MARK: - Fetched results controller
-    
-    var _fetchedResultsController: NSFetchedResultsController? = nil
     
     func controllerWillChangeContent(controller: NSFetchedResultsController) {
         print("controllerWillChangeContent")
@@ -127,4 +121,3 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     }
 
 }
-

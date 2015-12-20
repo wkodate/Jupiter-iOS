@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		893F365764F244AC82972C56 /* Pods_Jupiter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1F577E65B3A5118B61B7C321 /* Pods_Jupiter.framework */; };
+		C950165B1C2561F200904DC9 /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C950165A1C2561F200904DC9 /* ArticleTableViewCell.swift */; };
+		C950165C1C2561F200904DC9 /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C950165A1C2561F200904DC9 /* ArticleTableViewCell.swift */; };
+		C950165D1C2561F200904DC9 /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C950165A1C2561F200904DC9 /* ArticleTableViewCell.swift */; };
 		C9BA29631C2513190060EA87 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BA29621C2513190060EA87 /* AppDelegate.swift */; };
 		C9BA29661C2513190060EA87 /* Jupiter.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C9BA29641C2513190060EA87 /* Jupiter.xcdatamodeld */; };
 		C9BA29681C2513190060EA87 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BA29671C2513190060EA87 /* MasterViewController.swift */; };
@@ -41,6 +44,7 @@
 		1F577E65B3A5118B61B7C321 /* Pods_Jupiter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Jupiter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8660919D2FA318A1AA715581 /* Pods-Jupiter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jupiter.release.xcconfig"; path = "Pods/Target Support Files/Pods-Jupiter/Pods-Jupiter.release.xcconfig"; sourceTree = "<group>"; };
 		B2906166A787960FEEBA7682 /* Pods-Jupiter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Jupiter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Jupiter/Pods-Jupiter.debug.xcconfig"; sourceTree = "<group>"; };
+		C950165A1C2561F200904DC9 /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ArticleTableViewCell.swift; path = ../ArticleTableViewCell.swift; sourceTree = "<group>"; };
 		C9BA295F1C2513190060EA87 /* Jupiter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jupiter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9BA29621C2513190060EA87 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C9BA29651C2513190060EA87 /* Jupiter.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Jupiter.xcdatamodel; sourceTree = "<group>"; };
@@ -119,6 +123,7 @@
 		C9BA29611C2513190060EA87 /* Jupiter */ = {
 			isa = PBXGroup;
 			children = (
+				C950165A1C2561F200904DC9 /* ArticleTableViewCell.swift */,
 				C9BA29621C2513190060EA87 /* AppDelegate.swift */,
 				C9BA29671C2513190060EA87 /* MasterViewController.swift */,
 				C9BA29691C2513190060EA87 /* DetailViewController.swift */,
@@ -344,6 +349,7 @@
 				C9BA29661C2513190060EA87 /* Jupiter.xcdatamodeld in Sources */,
 				C9BA29681C2513190060EA87 /* MasterViewController.swift in Sources */,
 				C9BA296A1C2513190060EA87 /* DetailViewController.swift in Sources */,
+				C950165B1C2561F200904DC9 /* ArticleTableViewCell.swift in Sources */,
 				C9BA29961C251C3A0060EA87 /* Article.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -352,6 +358,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C950165C1C2561F200904DC9 /* ArticleTableViewCell.swift in Sources */,
 				C9BA297D1C2513190060EA87 /* JupiterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -360,6 +367,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C950165D1C2561F200904DC9 /* ArticleTableViewCell.swift in Sources */,
 				C9BA29881C2513190060EA87 /* JupiterUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
