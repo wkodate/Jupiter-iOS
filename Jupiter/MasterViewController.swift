@@ -70,6 +70,27 @@ class MasterViewController: UITableViewController, NSFetchedResultsControllerDel
     */
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         print("tableView cellForRowAtIndexPath")
+        print("B")
+        return basicCellAtIndexPath(indexPath)
+    }
+
+    /**
+    private func hasImageAtIndexPath(indexPath: NSIndexPath) -> Bool{
+        // TODO: 判定
+        return articles[indexPath.row].imageUrl == nil
+    }
+    */
+
+    /**
+    private func imageCellAtIndexPath(indexPath: NSIndexPath) -> ImageTableViewCell{
+        // TODO: 画像ありなし
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! ImageTableViewCell
+        print("indexPath.row=" + indexPath.row.description)
+        cell.setCell(articles[indexPath.row])
+        return cell
+    }
+    */
+    private func basicCellAtIndexPath(indexPath: NSIndexPath) -> ArticleTableViewCell{
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as! ArticleTableViewCell
         print("indexPath.row=" + indexPath.row.description)
         cell.setCell(articles[indexPath.row])

@@ -23,8 +23,10 @@ class DetailViewController: UIViewController {
     
     func configureView() {
         print("configureView")
+
         // WebViewを生成.
         webView = UIWebView()
+
         // WebViewのサイズを設定する.
         webView.frame = self.view.bounds
 
